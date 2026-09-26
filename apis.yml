@@ -1,23 +1,78 @@
 aid: argamedtech
+
 name: Argámedtech
-description: 'Argámedtech is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://img1.wsimg.com/isteam/ip/786408e0-1890-4c49-9bbf-d7a2008aa099/blob-9bae762.png
+
+description: Argámedtech is a medical technology company developing next‑generation non‑thermal cardiac ablation systems using Pulsed Field Ablation
+  (PFA) technology. The firm focuses on improving safety and efficacy of atrial fibrillation treatments, offering a versatile catheter‑based solution.
+  Their platform integrates advanced energy delivery and proprietary software to enhance procedural outcomes for physicians and patients worldwide.
+
 url: https://raw.githubusercontent.com/api-evangelist/argamedtech/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- MedTech
+- Cardiology
+- Healthcare
+- Innovation
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: LLMsTxt
+  url: llms/argamedtech-llms.txt
+- type: Hosts
+  url: hosts/argamedtech-hosts.yml
+- type: Newsroom
+  url: https://argamedtech.com/news
+- type: ChangeLog
+  url: https://argamedtech.com/whats-new
+- type: DomainSecurity
+  url: security/argamedtech-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/argámedtech
+  url: https://argamedtech.com
+- type: Documentation
+  url: https://argamedtech.com/technology
+- type: Support
+  url: https://argamedtech.com/contact
+- type: About
+  url: https://argamedtech.com/team
+
+apis:
+- name: Argámedtech API
+  description: API for Argámedtech medical technology platform
+  humanURL: https://argamedtech.com/technology
+  aid: argamedtech:arg-medtech-api
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: Technology page renders HTML and no machine‑readable OpenAPI spec was found despite probing common spec URLs.
+  evidence:
+  - url: https://argamedtech.com/technology
+    status: 200
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
